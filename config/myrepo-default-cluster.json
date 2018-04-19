@@ -16,21 +16,6 @@
           "hostPort": 9095,
           "protocol": "tcp",
           "containerPort": 9095
-        },
-        {
-          "hostPort": 8080,
-          "protocol": "tcp",
-          "containerPort": 8080
-        },
-        {
-          "hostPort": 443,
-          "protocol": "tcp",
-          "containerPort": 443
-        },
-        {
-          "hostPort": 80,
-          "protocol": "tcp",
-          "containerPort": 80
         }
       ],
       "command": [],
@@ -46,12 +31,12 @@
     }
   ],
   "placementConstraints": [],
-  "memory": "2048",
+  "memory": "1024"
   "family": "myrepo",
   "requiresCompatibilities": [
-    "FARGATE"
+    "EC2"
   ],
-  "networkMode": "awsvpc",
+  "networkMode": "bridge",
   "cpu": "512",
   "volumes": []
 }
