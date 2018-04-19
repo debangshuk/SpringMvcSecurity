@@ -31,7 +31,7 @@
     }
   ],
   "placementConstraints": [],
-  "memory": "1024"
+  "memory": "1024",
   "family": "myrepo",
   "requiresCompatibilities": [
     "EC2"
