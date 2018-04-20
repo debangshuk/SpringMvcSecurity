@@ -1,5 +1,6 @@
 node {
     def SERVICE_NAME
+    def TASK_ID
     def TASK_FAMILY
     def TASK_REVISION
     def DESIRED_COUNT
@@ -24,6 +25,7 @@ node {
     {
         sh '''
            TASK_FAMILY='first-run-task-defination'
+           TASK_ID = 'aws ecs list-tasks --cluster default --desired-status RUNNING'
            TASK_REVISION=`/var/lib/jenkins/.local/bin/aws ecs describe-task-definition --task-definition myrepo | egrep 'revisio' | tr '/' ' ' | awk '{print $2}'  | sed 's/"$//' ` 
            DESIRED_COUNT='1'
            SERVICE_NAME='ecs-myrepo-service'
