@@ -38,14 +38,14 @@
                             </div>
                             <div class="input-group input-sm">
                               <div class="checkbox">
-                                <label><input type="checkbox" id="rememberme" name="remember-me"> Remember Me</label>  
+                                <label><input type="checkbox" id="rememberme" name="remember-me"> Remember Password</label>  
                               </div>
                             </div>
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                  
                             <div class="form-actions">
                                 <input type="submit"
-                                    class="btn btn-block btn-primary btn-default" value="Submit">
+                                    class="btn btn-block btn-primary btn-default" value="Log in">
                             </div>
                         </form>
                     </div>
