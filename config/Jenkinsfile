@@ -29,6 +29,7 @@ node {
            TASK_REVISION=`/var/lib/jenkins/.local/bin/aws ecs describe-task-definition --task-definition myrepo | egrep 'revisio' | tr '/' ' ' | awk '{print $2}'  | sed 's/"$//' ` 
            DESIRED_COUNT='1'
            SERVICE_NAME='ecs-myrepo-service'
+           echo '/var/lib/jenkins/.local/bin/aws ecs stop-task --cluster default --task ${TASK_ID}'
            echo `/var/lib/jenkins/.local/bin/aws ecs update-service --cluster default  --service ${SERVICE_NAME} --task-definition myrepo:${TASK_REVISION} --desired-count ${DESIRED_COUNT}`
         '''
     }
